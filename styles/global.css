@@ -29,30 +29,47 @@
 
     --font-familly: 'raleway', sans-serif;
 
-    --title-lg: 700 3rem;
-    --title-md: 700 2.5rem;
-    --title-sm: 700 2rem;
-    --title-xs: 700 1rem;
+    --title-lg: 3rem;
+    --title-md: 2.5rem;
+    --title-sm: 2rem;
+    --title-xs: 1rem;
 
-    --subtitle: 500 2rem/2.0;
+    --subtitle: 2rem/2.0;
 
-    --body-lg: 400 1.25rem/1.4;
-    --body-md: 400 1rem/1.4;
-    --body-sm: 400 .875rem/1.4;
-    --body-xs: 400 .750rem/1.4;
+    --body-lg: 1.25rem/1.4;
+    --body-md: 1rem/1.4;
+    --body-sm: .875rem/1.4;
+    --body-xs: .750rem/1.4;
 
-    --button: 700 .875rem;
+    --button: .875rem;
 
-    --link: 500 .875rem;
+    --link: .875rem;
 
-    --tag: 700 .625rem;
+    --tag: .625rem;
 
 }
 
+body {
+    background: radial-gradient(circle at bottom right,
+            #3F0F41 5%,
+            /* pink-low */
+            #08233C 50%,
+            /* blue-low */
+            #0A0A0A 100%
+            /* quase preto */
+        ),
+        linear-gradient(180deg,
+            #0A0A0A 0%,
+            /* preto escuro */
+            #144A72 30%,
+            /* azul escuro */
+            #3F0F41 80%
+            /* rosa escuro */
+        );
 
-html,
-button {
-    font: 500 1.25rem/1.4 var(--font-familly)
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 a {
