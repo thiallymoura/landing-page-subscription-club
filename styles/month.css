@@ -1,0 +1,157 @@
+#month {
+    margin-inline: auto;
+    width: 70rem;
+    padding-block: 4rem 2rem;
+    padding-bottom: 5rem;
+
+
+    & .month-header {
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & img[src*="star"] {
+            display: inline-block;
+            justify-content: center;
+
+            width: 1.8rem;
+
+            filter: drop-shadow(0px 0px 1rem var(--pink-base));
+        }
+
+        & .title {
+            font: 700 var(--title-sm) var(--font-familly);
+            color: var(--text-title);
+        }
+
+        & p {
+            margin-top: .875rem;
+            font: 300 var(--body-md) var(--font-familly);
+            color: var(--text-body);
+            margin-bottom: 7rem;
+        }
+    }
+
+    .img-book {
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        & img[src*="books"] {
+            margin-inline: auto;
+            width: 30rem;
+            height: 38rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        & img[src*="bookmark-yellow"] {
+            width: 10rem;
+            height: 33rem;
+            position: absolute;
+            opacity: 0;
+            transition: transform 400ms linear, opacity 400ms linear;
+            z-index: 0;
+        }
+
+        & img[src*="bookmark-purple"] {
+            width: 10rem;
+            height: 33rem;
+            position: absolute;
+            opacity: 0;
+            transition: transform 400ms linear, opacity 400ms linear;
+            z-index: -1;
+        }
+
+        & img[src*="pin"] {
+            width: 14rem;
+            height: 14rem;
+            position: absolute;
+            opacity: 0;
+            transition: transform 400ms linear, opacity 400ms linear;
+            z-index: 1;
+        }
+
+        & img[src*="arrows"],
+        & img[src*="arrow-1"],
+        & img[src*="arrow-2"] {
+            position: absolute;
+            width: 10rem;
+            height: 10rem;
+            opacity: 0;
+            transition: transform 400ms linear, opacity 400ms linear;
+        }
+
+        & .label-1,
+        & .label-2,
+        & .label-3 {
+            position: absolute;
+            font: 500 var(--body-md) var(--font-familly);
+            color: var(--text-title);
+            opacity: 0;
+            transition: transform 400ms linear, opacity 400ms linear;
+            z-index: 0;
+        }
+
+        &:hover {
+            & img[src*="bookmark-yellow"] {
+                opacity: 1;
+                z-index: 0;
+                transform: translateY(-160px) translateX(275px) rotate(8deg);
+            }
+
+            & img[src*="bookmark-purple"] {
+                opacity: 1;
+                z-index: -1;
+                transform: translateY(-50px) translateX(380px) rotate(20deg);
+            }
+
+            & img[src*="pin"] {
+                opacity: 1;
+                z-index: 0;
+                transform: translateY(280px) translateX(-250px) rotate(-10deg);
+
+            }
+
+            & img[src*="arrows"] {
+                opacity: 1;
+                z-index: 0;
+                transform: translateY(260px) translateX(350px)
+            }
+
+            & img[src*="arrow-1"] {
+                opacity: 1;
+                z-index: 0;
+                transform: translateY(130px) translateX(-380px) rotate(-10deg);
+            }
+
+            & img[src*="arrow-2"] {
+                opacity: 1;
+                z-index: 0;
+                transform: translateY(-310px) translateX(-275px) rotate(5deg);
+            }
+
+            & .label-1 {
+                opacity: 1;
+                z-index: 0;
+                transform: translateY(-350px) translateX(-380px)
+            }
+
+            & .label-2 {
+                opacity: 1;
+                z-index: 0;
+                transform: translateY(30px) translateX(-400px);
+            }
+
+            & .label-3 {
+                opacity: 1;
+                z-index: 0;
+                transform: translateY(360px) translateX(300px)
+            }
+        }
+    }
+
+}

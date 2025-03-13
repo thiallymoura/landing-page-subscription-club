@@ -36,10 +36,10 @@
 
     --subtitle: 2rem/2.0;
 
-    --body-lg: 1.25rem/1.4;
-    --body-md: 1rem/1.4;
-    --body-sm: .875rem/1.4;
-    --body-xs: .750rem/1.4;
+    --body-lg: 1.25rem;
+    --body-md: 1rem;
+    --body-sm: .875rem;
+    --body-xs: .750rem;
 
     --button: .875rem;
 
