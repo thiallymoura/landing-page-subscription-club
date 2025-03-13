@@ -1,0 +1,83 @@
+#phrase {
+    margin-inline: auto;
+    width: 70rem;
+    padding-block: 4rem 2rem;
+
+    & .phrase-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        & img {
+            height: 4rem;
+            aspect-ratio: 1;
+            position: relative;
+            opacity: 0;
+            animation: phrase 750ms ease-out forwards;
+
+            transition: scale 350ms;
+            transition: transform 500ms;
+
+            &:hover {
+                scale: 1.2;
+            }
+        }
+
+        & img[src*="book"] {
+            animation-delay: 3s;
+
+        }
+
+        & img[src*="planchette"] {
+            animation-delay: 3.75s;
+            position: absolute;
+            left: 2rem;
+            transform: rotate(90deg);
+        }
+
+        & img[src*="ball"] {
+            animation-delay: 4.5s;
+            position: absolute;
+            right: 2rem;
+            transform: rotate(-30deg);
+        }
+
+        & img[src*="book"]:hover {
+            transform: rotate(20deg);
+        }
+
+        & img[src*="planchette"]:hover {
+            transform: rotate(120deg);
+        }
+
+        & img[src*="ball"]:hover {
+            transform: rotate(-10deg);
+        }
+
+        & h2 {
+            text-align: center;
+            font: 500 1.5rem var(--font-familly);
+            color: var(--text-body);
+            margin-bottom: 1rem;
+
+            & span {
+                display: block;
+                letter-spacing: .125rem;
+                text-align: center;
+                color: var(--text-body);
+            }
+
+            & b {
+                color: var(--blue-light);
+            }
+        }
+
+    }
+}
+
+@keyframes phrase {
+    100% {
+        opacity: 1;
+    }
+}
