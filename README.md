@@ -1,7 +1,7 @@
 <h1> 🚀 Desafio prático - Encantos Literários</h1>
 
 <p align="center">
-  <img alt="" src="">
+  <img alt="" src="./assets/readme.png">
 </p>
 
 ## 🚀 Tecnologias
