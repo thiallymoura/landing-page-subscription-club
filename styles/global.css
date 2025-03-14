@@ -76,3 +76,7 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+[role="list"] {
+    list-style: none;
+}

@@ -1,0 +1,243 @@
+#prices {
+    margin-inline: auto;
+    width: 70rem;
+    padding-block: 4rem 2rem;
+    height: 60rem;
+    background: url(/assets/images/pricing-background.png) no-repeat center/cover;
+
+    & .cards {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    & h1 {
+        text-align: center;
+        font: 700 var(--title-sm) var(--font-familly);
+        color: var(--text-title);
+        margin-bottom: 12rem;
+    }
+
+    & .card {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+
+        width: 18rem;
+        height: 27rem;
+        background-color: var(--shape-base);
+        border: 1px solid var(--shape-stroke);
+        border-radius: 1.5rem;
+
+        position: relative;
+
+        & .stars-anual {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translateX(4rem) translateY(3rem) rotate(165deg);
+            z-index: 1;
+
+            & .star-max {
+                width: 1.8rem;
+                aspect-ratio: 1;
+                margin: 1rem;
+            }
+
+            & .star-min {
+                width: .750rem;
+                aspect-ratio: 1;
+                margin-bottom: 2rem;
+            }
+        }
+
+        & .stars-mensal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-4rem) translateY(-3rem) rotate(90deg);
+            z-index: 1;
+
+            & .star-max {
+                width: 1.8rem;
+                aspect-ratio: 1;
+                margin-left: 3rem;
+            }
+
+            & .star-min {
+                width: .750rem;
+                aspect-ratio: 1;
+                margin-bottom: -.985rem;
+
+            }
+        }
+
+
+        & .title-month {
+            font: 700 var(--title-xs) var(--font-familly);
+            color: var(--blue-light);
+            margin: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        & zin-pricing {
+            font: 700 var(--title-md) var(--font-familly);
+            color: var(--text-title);
+            margin-bottom: .5rem;
+        }
+
+        & zin-pricing small {
+            font: 700 var(--title-xs) var(--font-familly);
+        }
+
+        & span {
+            font: 300 var(--body-md) var(--font-familly);
+            color: var(--text-label);
+            margin-bottom: 4.3rem;
+        }
+
+        & li {
+            font: 300 .75rem var(--font-familly);
+            color: var(--text-body);
+            display: flex;
+            align-items: center;
+
+            & img {
+                transform: rotate(8deg);
+            }
+        }
+
+        & a {
+            background-color: var(--blue-dark);
+            border-radius: .5rem;
+            padding: .75rem 3.28rem;
+            margin-top: 1.5rem;
+            font: 700 var(--button) var(--font-familly);
+            color: var(--text-title);
+            text-align: center;
+
+        }
+    }
+
+    .card-semestral {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+
+        width: 18rem;
+        height: 27rem;
+        background-color: var(--shape-hover);
+        border: 1px solid var(--shape-stroke);
+        border-radius: 1.5rem;
+
+        position: relative;
+
+        transform: translateY(-1rem);
+        z-index: 1;
+        /* Centraliza verticalmente */
+
+        & img[src*="bunny"] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateX(-13rem) translateY(-3.2rem);
+            z-index: 0;
+        }
+
+        & span {
+            margin-bottom: 2rem;
+        }
+
+        & .card-details {
+            display: flex;
+            flex-direction: column;
+
+            position: relative;
+
+            & .title-pink {
+                font: 700 var(--title-xs) var(--font-familly);
+                color: var(--pink-light);
+                margin: 0;
+                margin-bottom: 1.5rem;
+            }
+
+            & b {
+                font: 700 var(--tag) var(--font-familly);
+                color: var(--text-body);
+                margin-bottom: .5rem;
+                background-color: var(--shape-stroke);
+                border-radius: .5rem;
+                padding: .5rem 1rem;
+                width: 5rem;
+                text-align: center;
+                text-transform: uppercase;
+
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        & a {
+            background-color: var(--pink-dark);
+            border-radius: .5rem;
+            padding: .75rem 3.28rem;
+            margin-top: 1.5rem;
+            font: 700 var(--button) var(--font-familly);
+            color: var(--text-title);
+            text-align: center;
+        }
+
+    }
+
+    & .card:last-child {
+        & span {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .card-monthly {
+        transform: translateY(2rem) translateX(1rem) rotate(-8deg);
+        transition: scale 0.3s ease;
+    }
+
+    .card-semestral {
+        transform: translateY(-2rem);
+        z-index: 1;
+        transition: scale 0.3s ease;
+    }
+
+    .card-annual {
+        transform: translateY(2rem) translateX(-1rem) rotate(8deg);
+        transition: scale 0.300s ease;
+    }
+
+    .card:hover {
+        scale: 1.02;
+        box-shadow: 2px 0 50px rgba(20, 74, 114, 0.2);
+        z-index: 2;
+
+    }
+
+    .card-monthly:hover,
+    .card-annual:hover {
+        background-color: #001933;
+    }
+
+    .card-monthly.delayed,
+    .card-annual.delayed {
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards 1s;
+    }
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
