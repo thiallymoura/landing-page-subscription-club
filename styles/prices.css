@@ -4,6 +4,7 @@
     padding-block: 4rem 2rem;
     height: 60rem;
     background: url(/assets/images/pricing-background.png) no-repeat center/cover;
+    margin-bottom: 10rem;
 
     & .cards {
         display: flex;
