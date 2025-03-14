@@ -78,4 +78,31 @@
             color: #E2E7E9;
         }
     }
+
+    & .description h1 {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInH1 0.5s ease forwards 500ms;
+    }
+
+    & .description p {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInP 0.5s ease forwards 1s;
+    }
+
+}
+
+@keyframes fadeInH1 {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInP {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
